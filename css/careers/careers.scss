@@ -1,0 +1,84 @@
+// start main_header
+.mian_header{
+    h1{
+        position: absolute;
+        letter-spacing: 10px;
+        font-family: 'Archivo Black', sans-serif;
+        top: 40%;
+        text-align: center;
+        width: 100%;
+    }
+}
+// end main_header
+.main_descriptions{
+    padding: 100px 0;
+    div{
+        position: relative;
+        p{
+            font-size: 18px;
+            color: #20658a;
+            font-weight: bolder;
+            line-height: 1.8;
+        }
+    }
+}
+// end main_descriptions
+// start contact
+.contact{
+    .adress{
+        display: flex;
+        justify-content: space-between;
+        input{
+            width: 30%;
+            @media(max-width:450px){
+                width: 100%;
+            }
+        }
+    }
+    .textarea{
+        width: 100%;
+        min-height: 200px;
+        max-height: 300px;
+        resize: vertical;
+        border: 1px solid #ffbf6b;
+        border-radius: 10px;
+        background-color: transparent;
+        padding: 15px;
+        color: #ffbf6b;
+        transition: all .3s ease-in-out;        
+        &::placeholder{
+            color: #ffbf6b;
+        }
+        &:focus{
+            padding-left: 40px;
+        }
+    }
+    .file_input{
+        input{
+            width: 100%;
+            display: none;
+        }
+        label{
+            width: 100%;
+            margin: 20px 0;
+            border: 1px solid #ffbf6b;
+            background-color: transparent;
+            padding:15px;
+            color: #ffbf6b;
+            border-radius: 10px;
+            outline: 0px;
+            text-align: left;
+            display: block;
+            cursor: pointer;
+            &:focus{
+                padding-left: 40px;
+            }
+        }
+    }
+
+}
+// end contact
+// start subscripe
+.subscripe{
+    height: 200px;
+}

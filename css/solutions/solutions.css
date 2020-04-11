@@ -1,0 +1,409 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif; }
+
+.flex {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  display: flex; }
+
+.flexable_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.flexable_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.flexable_row_around {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+aside {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: black;
+  color: #fff;
+  transition: all .3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
+  cursor: pointer;
+  z-index: 999999;
+  display: none; }
+
+::-webkit-scrollbar {
+  width: 0px; }
+
+::-webkit-scrollbar-track {
+  background: #fff; }
+
+::-webkit-scrollbar-thumb {
+  background: #a10532; }
+
+.footer > div, .main_header button, .contact form input, .contact form select, .contact form input[type=submit], .contact form select[type=submit], .subscripe input {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+/* strat global roles */
+.main_header {
+  position: relative;
+  height: 100vh;
+  color: #fff; }
+  .main_header .bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; }
+  .main_header .nav_bar img:first-of-type {
+    width: 280px; }
+    @media (max-width: 400px) {
+      .main_header .nav_bar img:first-of-type {
+        width: 230px; } }
+  .main_header .nav_bar img:last-of-type {
+    cursor: pointer; }
+  .main_header div h1 {
+    text-transform: uppercase; }
+    @media (max-width: 767px) {
+      .main_header div h1 {
+        font-size: 2em; } }
+    @media (max-width: 450px) {
+      .main_header div h1 {
+        font-size: 1.5em; } }
+  .main_header div p {
+    width: 75%;
+    margin: 30px auto;
+    font-size: 1.3em;
+    line-height: 2; }
+    @media (max-width: 767px) {
+      .main_header div p {
+        width: 90%; } }
+    @media (max-width: 450px) {
+      .main_header div p {
+        font-size: 1em; } }
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 200px; }
+  .footer .bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .footer > div {
+    height: 100%;
+    width: 80px;
+    min-height: 200px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+    .footer > div img {
+      max-width: 80%; }
+    .footer > div:hover {
+      width: 120px; }
+    @media (max-width: 767px) {
+      .footer > div {
+        width: 70px; } }
+    @media (max-width: 580px) {
+      .footer > div {
+        width: 50px;
+        height: 120px !important; }
+        .footer > div img {
+          width: 30px;
+          height: 40px;
+          object-fit: contain; }
+        .footer > div:hover {
+          width: 50px; } }
+  .footer > div:first-of-type {
+    background-color: #3b5999; }
+  .footer > div:nth-of-type(2) {
+    background-color: #0077B5; }
+  .footer > div:nth-of-type(3) {
+    background-color: #55acee; }
+  .footer > div:nth-of-type(4) {
+    background-color: #cd201f; }
+  .footer > div:nth-of-type(5) {
+    background-color: #dd4b39; }
+  .footer > div:nth-of-type(6) {
+    background-color: #ea4c89; }
+  .footer > div:nth-of-type(7) {
+    background-color: #e4405f; }
+
+body {
+  overflow-x: hidden !important; }
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+  overflow: scroll;
+  overflow-x: hidden; }
+  .popup iframe{
+    max-width: 90%;
+    position: relative;
+    z-index: 999999;
+  }
+  .popup::-webkit-scrollbar {
+    width: 0px; }
+  .popup .close_popup {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer; }
+    .popup .close_popup span {
+      width: 2px;
+      background: #fff;
+      border-radius: 5%;
+      height: 15px;
+      display: inline-block;
+      margin-left: 0px;
+      position: relative; }
+      .popup .close_popup span:first-of-type {
+        transform: rotate(-45deg);
+        bottom: 8px; }
+      .popup .close_popup span:last-of-type {
+        transform: rotate(45deg);
+        bottom: 8px;
+        left: -5px; }
+  .popup img {
+    max-width: 80%; }
+
+@media (max-width: 767px) {
+  .main_header {
+    height: 800px !important; } }
+.main_header .container {
+  position: relative;
+  height: 100%; }
+  .main_header .container .logo_bg {
+    position: absolute;
+    top: 0px;
+    left: 0px; }
+    @media (max-width: 767px) {
+      .main_header .container .logo_bg {
+        display: none; } }
+  .main_header .container .text-center {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .main_header .container h1 {
+    padding-top: 0 !important; }
+.main_header button {
+  width: 225px;
+  background: #ffbf6b;
+  color: #fff;
+  height: 65px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  margin: 20px 10px;
+  border: 0px;
+  border: 2px solid #ffbf6b;
+  outline: 0px;
+  cursor: pointer; }
+  .main_header button:hover {
+    background: transparent;
+    color: #ffbf6b; }
+
+.main_descriptions {
+  padding: 50px 0;
+  position: relative; }
+  .main_descriptions .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;}
+  .main_descriptions .row {
+    margin-bottom: 130px;
+    align-items: flex-start;
+    padding-left: 10%; }
+    @media (max-width: 1200px) {
+      .main_descriptions .row {
+        padding-left: 0px; } }
+    .main_descriptions .row div h3 {
+      color: #153d52;
+      font-size: 28px;
+      text-align: center;
+      font-weight: bolder;
+      margin-bottom: 20px;
+      text-align: left;
+      text-transform: uppercase; }
+    .main_descriptions .row div p {
+      color: #20658a;
+      line-height: 2;
+      width: 90%;
+      padding-top: 30px; }
+    .main_descriptions .row div img {
+      width: 300px;
+      height: 200px;
+      cursor: pointer; }
+      @media (max-width: 400px) {
+        .main_descriptions .row div img {
+          width: 250px; } }
+    .main_descriptions .row:nth-of-type(n+2) p {
+      padding-top: 0px; }
+    .main_descriptions .row:nth-of-type(n+2) h3 {
+      text-align: left;
+      margin: 0 auto; }
+    .main_descriptions .row:nth-of-type(n+2) h4 {
+      color: #153d52;
+      font-size: 20px; }
+    .main_descriptions .row:nth-of-type(n+2) h3 + p {
+      text-align: left; }
+
+.contact {
+  position: relative;
+  text-align: center;
+  padding: 50px 0;
+  color: #ffbf6b; }
+  .contact .bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; }
+  .contact a {
+    text-decoration: none;
+    color: #ffbf6b; }
+  .contact h1 {
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 50px;
+    position: relative; }
+    .contact h1:after {
+      width: 100px;
+      height: 1px;
+      background-color: #ffbf6b;
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -50px; }
+  .contact form div {
+    flex-direction: row; }
+    @media (max-width: 450px) {
+      .contact form div {
+        flex-direction: column; } }
+  .contact form input, .contact form select {
+    width: 48%;
+    margin-bottom: 20px;
+    border: 1px solid #ffbf6b;
+    background-color: transparent;
+    padding: 15px;
+    color: #ffbf6b;
+    border-radius: 10px;
+    outline: 0px; }
+    .contact form input:focus, .contact form select:focus {
+      padding-left: 40px; }
+    @media (max-width: 450px) {
+      .contact form input, .contact form select {
+        width: 100%; } }
+  .contact form input::placeholder, .contact form select::placeholder {
+    color: #ffbf6b;
+    text-transform: capitalize; }
+  .contact form select {
+    width: 100%;
+    text-transform: capitalize; }
+  .contact form input[type=submit], .contact form select[type=submit] {
+    width: 200px;
+    margin-top: 30px;
+    background-color: #ffbf6b;
+    border: 1px solid #ffbf6b;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 17px;
+    cursor: pointer; }
+    .contact form input[type=submit]:hover, .contact form select[type=submit]:hover {
+      background: transparent;
+      color: #ffbf6b; }
+
+.subscripe {
+  padding: 50px 0;
+  position: relative; }
+  .subscripe .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+    z-index: -1; }
+  .subscripe h3 {
+    color: #d1675a;
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    text-transform: capitalize;
+    letter-spacing: 3px; }
+    @media (max-width: 540px) {
+      .subscripe h3 {
+        font-size: 33px; } }
+  .subscripe input, .subscripe .contact form select, .contact form .subscripe select {
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #d1675a;
+    background: transparent;
+    color: #d1675a;
+    margin-top: 30px;
+    outline: 0px; }
+    @media screen and (max-width: 540px) {
+      .subscripe input, .subscripe .contact form select, .contact form .subscripe select {
+        width: 260px; } }
+    .subscripe input:focus, .subscripe .contact form select:focus, .contact form .subscripe select:focus {
+      padding-left: 40px; }
+  .subscripe input::placeholder, .subscripe .contact form select::placeholder, .contact form .subscripe select::placeholder {
+    color: #d1675a;
+    text-transform: capitalize; }
+  .subscripe div {
+    position: relative; }
+    .subscripe div i {
+      position: relative;
+      right: 40px;
+      color: #d1675a;
+      cursor: pointer; }
+
+/*# sourceMappingURL=solutions.css.map */

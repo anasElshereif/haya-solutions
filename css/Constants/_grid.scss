@@ -1,0 +1,74 @@
+body{
+    margin:0;
+    font-family: 'Lato', sans-serif;
+}
+.flex{
+	-webkit-display:flex;
+	-moz-display:flex;
+	-o-display:flex;
+	display: flex;
+}
+.flexable_row{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+.flexable_column{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center
+}
+.flexable_row_around{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style: none
+}
+aside{
+    position:fixed;
+    bottom: 10px;
+    right:10px;
+    background-color:black;
+    color: #fff;
+    transition:all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px 12px;
+    cursor: pointer;
+    z-index:999999;
+    display: none;
+}
+
+::-webkit-scrollbar{
+    width:0px;
+}
+::-webkit-scrollbar-track{
+    background: #fff;
+}
+::-webkit-scrollbar-thumb{
+    background: #a10532;
+}
+$padding_val: 50px 0; 
+%transition{
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;        
+}
+%cover_bg{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+}
+/* strat global roles */

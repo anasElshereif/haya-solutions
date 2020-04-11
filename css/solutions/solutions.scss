@@ -1,0 +1,312 @@
+// start importing
+@import "../Constants/_grid.scss";
+@import "../Constants/_submenue.scss";
+@import "../Constants/_header.scss";
+@import "../Constants/_footer.scss";
+// end importing
+body{
+    overflow-x: hidden !important;
+}
+// start popup
+.popup{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+    overflow: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
+    .close_popup{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        cursor: pointer;
+        span{
+            width: 2px;
+            background: #fff;
+            border-radius: 5%;
+            height: 15px;
+            display: inline-block;
+            margin-left: 0px;
+            position: relative;
+            &:first-of-type{
+                transform: rotate(-45deg);
+                bottom:8px;
+            }
+            &:last-of-type{
+                transform: rotate(45deg);
+                bottom: 8px;
+                left: -5px;
+            }
+        }
+    }
+    img{
+        max-width:80%; 
+    }
+}
+// start main header
+.main_header {
+    @media(max-width:767px){
+        height: 800px !important;
+    }
+    .container{
+        position: relative;
+        height: 100%;
+        .logo_bg{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            @media(max-width:767px){
+                display: none;
+            }
+        }
+        .text-center{
+            position: absolute;
+            width: 100%;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1{
+            padding-top:0 !important; 
+        }
+    }
+    button{
+        width: 225px;
+        background: #ffbf6b;
+        color: #fff;
+        height: 65px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        margin: 20px 10px;
+        border: 0px;
+        @extend %transition;
+        border: 2px solid #ffbf6b;
+        outline: 0px;
+        cursor: pointer;
+        &:hover{
+            background: transparent;
+            color: #ffbf6b;
+        }
+    }
+}
+// start main_descriptions
+.main_descriptions{
+    padding: $padding_val;
+    position: relative;
+    .bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        object-fit: cover;
+    }
+    .row{
+        margin-bottom: 130px;
+        align-items: flex-start;
+        padding-left: 10%;
+        @media(max-width:1200px){
+            padding-left: 0px;
+        }
+        div{
+        h3{
+            color: #153d52;
+            font-size: 28px;
+            text-align: center;
+            font-weight: bolder;
+            margin-bottom: 20px; 
+            text-align: left;
+            text-transform: uppercase; 
+        }
+        p{
+            color: #20658a;
+            line-height: 2;
+            width: 90%;
+            padding-top: 30px;
+        }
+        img{
+            width: 300px;
+            cursor: pointer;
+            @media(max-width:400px){
+                width: 250px;
+            }
+        }
+        iframe{
+            width: 300px;
+            cursor: pointer;
+            @media(max-width:400px){
+                width: 250px;
+            }
+        }
+    }
+    &:nth-of-type(n+2){
+        p{
+            padding-top:0px; 
+        }
+        h3{
+            text-align: left;
+            margin: 0 auto;
+        }
+        h4{
+            color: #153d52;
+            font-size: 20px;
+        }
+        h3 + p{
+            text-align: left;
+        }
+    }
+    }
+}
+// end main_descriptions
+// start contact
+.contact{
+    position: relative;
+    text-align: center;
+    padding: $padding_val;
+    color: #ffbf6b;
+    .bg{
+        position: absolute;
+        top:0px;
+        left:0px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+    a{
+        text-decoration: none;
+        color: #ffbf6b;
+    }
+    h1{
+        text-transform: capitalize;
+        letter-spacing: 4px;
+        font-family: 'Great Vibes', cursive;
+        margin-bottom: 50px;
+        position: relative;
+        &:after{
+            width: 100px;
+            height: 1px;
+            background-color: #ffbf6b;
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            margin-left: -50px;
+        }
+    }
+    form{
+        div{
+            flex-direction: row;
+            @media(max-width:450px){
+                flex-direction: column;
+            }
+        }
+        input{
+            width: 48%;
+            margin-bottom: 20px;
+            border: 1px solid #ffbf6b;
+            background-color: transparent;
+            padding:15px;
+            color: #ffbf6b;
+            border-radius: 10px;
+            outline: 0px;
+            @extend %transition;
+            &:focus{
+                padding-left: 40px;
+            }
+            @media(max-width:450px){
+                width: 100%;
+            }
+        }
+        input::placeholder{
+            color: #ffbf6b;
+            text-transform: capitalize;
+        }
+        select{
+            @extend input;
+            width: 100%;
+            text-transform: capitalize;
+        }
+        input[type = submit]{
+            width: 200px;
+            margin-top: 30px;
+            background-color: #ffbf6b;
+            border:1px solid #ffbf6b;
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 17px;
+            @extend %transition;
+            cursor: pointer;
+            &:hover{
+                background: transparent;
+                color: #ffbf6b;
+            }
+        }
+    }
+}
+// start subscripe
+.subscripe{
+    padding: $padding_val;
+    position: relative;
+    .bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        object-fit: cover;
+        z-index: -1;
+    }
+    h3{
+        color: #d1675a;
+        font-family: 'Great Vibes', cursive;
+        font-size: 40px;
+        text-transform: capitalize;
+        letter-spacing: 3px; 
+        @media(max-width:540px){
+            font-size: 33px;
+        }
+    }
+    input{
+        width: 300px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border:1px solid #d1675a;
+        background: transparent;
+        color: #d1675a;
+        margin-top: 30px;   
+        outline: 0px;
+        @media screen and (max-width:540px){
+            width:260px;
+        }
+        @extend %transition;
+        &:focus{
+            padding-left: 40px;
+        }     
+    }
+    input::placeholder{
+        color: #d1675a;
+        text-transform: capitalize;
+    }
+    div{
+        position: relative;
+        i{
+            position: relative;
+            right: 40px;
+            color: #d1675a;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+// start main_header
+.main_header{
+    position: relative;
+    height: 100vh;
+    color: #fff;
+   .bg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    }
+    .nav_bar{
+        img:first-of-type{
+            width: 280px;
+            @media(max-width:400px){
+                width: 230px;
+            }
+        }
+        img:last-of-type{
+            cursor: pointer;
+        }
+    }
+    div h1{
+        text-transform: uppercase;
+        @media(max-width:767px){
+            font-size: 2em;
+        }
+        @media(max-width:450px){
+            font-size: 1.5em;
+        }
+    }
+    div p{
+        width: 75%;
+        margin:30px auto;
+        font-size: 1.3em;
+        line-height: 2;
+        @media(max-width:767px){
+            width: 90%;
+        }
+        @media(max-width:450px){
+            font-size: 1em;
+        }
+    }
+}
+// end main_header

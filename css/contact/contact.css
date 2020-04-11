@@ -1,0 +1,151 @@
+.main_header {
+  position: relative; }
+  .main_header h1 {
+    position: absolute;
+    letter-spacing: 10px;
+    font-family: 'Archivo Black', sans-serif;
+    top: 40%;
+    text-align: center;
+    width: 100%; }
+
+.main_descriptions p {
+  position: relative;
+  font-size: 20px;
+  color: #20658a;
+  font-weight: bolder;
+  line-height: 2;
+  text-transform: uppercase; }
+
+.contact {
+  text-align: left; }
+  .contact h1 {
+    text-transform: none;
+    text-align: center; }
+  .contact textarea {
+    width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #ffbf6b;
+    transition: all .3s ease-in-out;
+    padding: 15px;
+    color: #ffbf6b; }
+    .contact textarea::placeholder {
+      color: #ffbf6b; }
+    .contact textarea:focus {
+      padding-left: 40px; }
+  .contact input.checkbox {
+    width: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 20px;
+    display: none; }
+    .contact input.checkbox:checked + label::after {
+      opacity: 1; }
+  .contact label[for="contact_chechbox"] {
+    position: relative;
+    margin-top: 20px; }
+    .contact label[for="contact_chechbox"]::before {
+      content: "";
+      width: 18px;
+      margin-right: 15px;
+      cursor: pointer;
+      position: relative;
+      bottom: -5px;
+      border-radius: 2px;
+      height: 18px;
+      display: inline-block;
+      border: 1px solid #ffbf6b; }
+    .contact label[for="contact_chechbox"]::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f00c";
+      font-size: 12px;
+      width: 18px;
+      margin-right: 15px;
+      cursor: pointer;
+      position: absolute;
+      left: 0px;
+      bottom: 1px;
+      border-radius: 2px;
+      height: 18px;
+      display: inline-block;
+      border: 1px solid #fff;
+      text-align: center;
+      background: #fff;
+      opacity: 0;
+      transition: all .2s ease-in; }
+  .contact input[type="submit"] {
+    display: block;
+    margin: 20px auto; }
+  .contact q {
+    text-align: center;
+    display: block;
+    margin-top: 40px; }
+
+.location {
+  position: relative;
+  padding: 100px 0; }
+  .location .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+    z-index: -1; }
+  .location .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; }
+    @media (max-width: 767px) {
+      .location .container {
+        flex-direction: column; } }
+    .location .container div h2 {
+      color: #20658a;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: bolder;
+      letter-spacing: 4px; }
+    .location .container div p {
+      color: #16465e;
+      font-size: 28px;
+      text-transform: capitalize; }
+    .location .container div .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap; }
+      .location .container div .content div {
+        width: 50%;
+        padding: 20px 0; }
+        @media (max-width: 992px) {
+          .location .container div .content div {
+            width: 100%; } }
+        .location .container div .content div p {
+          display: inline-block;
+          margin-left: 10px;
+          font-size: 20px;
+          color: #20658a; }
+        .location .container div .content div img {
+          position: relative;
+          top: -2px; }
+        .location .container div .content div .top {
+          top: -30px; }
+    .location .container div .office h4 {
+      text-transform: uppercase;
+      color: #20658a; }
+    .location .container div .office p {
+      font-size: 22px;
+      color: #20658a; }
+
+.contact label[for="contact_chechbox"]::after {
+  top: 5px; }
+
+.for_support a {
+  color: #ffbf6b;
+  text-decoration: none; }
+
+/*# sourceMappingURL=contact.css.map */
